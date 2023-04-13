@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import OneProduct from "../../layouts/OneProduct.astro";
+const { id } = Astro.params;
+---
+
+<Layout title="product page">
+  <OneProduct id={id} />
+</Layout>
+
+<style></style>

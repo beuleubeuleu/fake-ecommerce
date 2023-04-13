@@ -6,8 +6,6 @@ const fetchAllProducts = () =>
   fetch("https://fakestoreapi.com/products").then((res) => res.json());
 
 const allProducts = await fetchAllProducts();
-const { title, description, price, image } = allProducts[0];
-const href = ".";
 ---
 
 <Layout title="Welcome to fake e-commerce.">
@@ -25,6 +23,7 @@ const href = ".";
             title={product.title}
             image={product.image}
             price={`${product.price}€`}
+            href={`/products/${product.id}`}
           />
         ))
       }
